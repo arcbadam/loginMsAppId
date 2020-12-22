@@ -16,6 +16,32 @@ spring:
   application:
     name: loginMs
     
+jwt:
+  secret: secretkey123
+  get:
+    token:
+      uri: /authenticate
+   
+jwt.token.validity.minuite: 30
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${eureka.uri:http://localhost:8100//eureka}          
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 160000000
+        readTimeout: 160000000
+    
+    
 security:
   oauth2:
     client:
@@ -27,4 +53,4 @@ security:
       userInfoUri: https://us-south.appid.cloud.ibm.com/oauth/v4/d45e06da-d9e7-40ee-8949-2ff63336f552/userinfo
     
 server:
-  port: 8200
+  port: 8400
