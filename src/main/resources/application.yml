@@ -45,8 +45,6 @@ feign:
 security:
   oauth2:
     client:
-      clientId: c9abd274-494d-4df7-9d95-aa55620b0290
-      clientSecret: NWNlYmNiMTEtNmFjYy00OTllLThiODAtZTA4N2VhYjdmMzk2
       accessTokenUri: https://us-south.appid.cloud.ibm.com/oauth/v4/d45e06da-d9e7-40ee-8949-2ff63336f552/token
       userAuthorizationUri: https://us-south.appid.cloud.ibm.com/oauth/v4/d45e06da-d9e7-40ee-8949-2ff63336f552/authorization
     resource:
