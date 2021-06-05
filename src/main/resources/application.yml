@@ -3,7 +3,6 @@ spring:
     url: jdbc:h2:mem:userAppIDdb
     driver-class-name: org.h2.Driver
     username: ibm
-    password: ibm
   main:
     allow-bean-definition-overriding: true
     
@@ -17,7 +16,7 @@ spring:
     name: loginMs
     
 jwt:
-  secret: secretkey123
+  
   get:
     token:
       uri: /authenticate
